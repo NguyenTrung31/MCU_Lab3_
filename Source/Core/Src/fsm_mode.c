@@ -16,7 +16,6 @@ void fsm_mode_run(){
 		status_hor = INIT;
 		status_led7seg = INIT;
 		index_led = 0;
-		//setTimer1(500);
 		break;
 	case MODE1 :
 		if (isButtonflag(but1) == 1){
@@ -30,7 +29,6 @@ void fsm_mode_run(){
 			led12 = MODE2;
 			led34 = timered;
 			status_led7seg = MODE_MODIFY_led7seg_1;
-			//setTimer0(1000);
 		}
 		break;
 	case MODE2:
@@ -45,7 +43,6 @@ void fsm_mode_run(){
 			led12 = MODE3;
 			led34 = timeyellow;
 			status_led7seg = MODE_MODIFY_led7seg_1;
-			//setTimer0(1000);
 		}
 		if (isButtonflag(but2) == 1){
 			led34++;
@@ -69,7 +66,6 @@ void fsm_mode_run(){
 			led12 = MODE4;
 			led34 = timegreen;
 			status_led7seg = MODE_MODIFY_led7seg_1;
-			//setTimer0(1000);
 		}
 		if (isButtonflag(but2) == 1){
 			led34++;

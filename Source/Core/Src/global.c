@@ -7,6 +7,7 @@
 
 
 # include "global.h"
+
 int status_mode = 0;
 int status_ver = 0;
 int status_hor = 0;

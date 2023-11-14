@@ -8,7 +8,7 @@
 #ifndef INC_INPUT_READING_H_
 #define INC_INPUT_READING_H_
 
-#define N0_OF_BUTTONS 					3
+#define N0_OF_BUTTONS		3
 void button_reading(void );
 void fsm_for_input_processing(uint8_t index );
 int isButtonflag(int index);

@@ -7,6 +7,8 @@
 
 
 #include <fsm_mode_Led7Seg.h>
+//int Ts = 10;
+//int count = 1;
 void fsm_mode_led7seg(){
 
 	switch (status_led7seg){

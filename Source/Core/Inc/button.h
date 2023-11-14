@@ -9,12 +9,9 @@
 #define INC_BUTTON_H_
 
 #include "global.h"
-#include "main.h"
 
 #define NORMAL_STATE GPIO_PIN_SET
 #define PRESSED_STATE GPIO_PIN_RESET
-
-int isButtonflag(int index);
 
 void getKeyInput();
 
