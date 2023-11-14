@@ -7,8 +7,8 @@
 
 
 #include <fsm_mode_Led7Seg.h>
-
 void fsm_mode_led7seg(){
+
 	switch (status_led7seg){
 		case INIT:
 				status_led7seg = MODE1_led7seg_1;

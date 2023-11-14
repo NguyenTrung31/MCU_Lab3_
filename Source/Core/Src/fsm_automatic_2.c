@@ -23,14 +23,17 @@ void fsm_automatic_2_run(){
 			led34 = timegreen;
 			setTimer2(timeTimer(timegreen));
 		}
+
 		break;
 	case AUTO_GREEN:
+
 		SetGreenHor();
 		if (timer2_flag == 1){
 			status_hor = AUTO_YELLOW;
 			led34 = timeyellow;
 			setTimer2(timeTimer(timeyellow));
 		}
+
 		break;
 	case AUTO_YELLOW:
 		SetYellowHor();

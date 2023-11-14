@@ -11,9 +11,11 @@
 void fsm_automatic_1_run(){
 	switch (status_ver){
 	case INIT:
+
 		SetOffVer();
 		led12 = timered;
 		status_ver = AUTO_RED;
+
 		setTimer1(timeTimer(timered));
 		break;
 	case AUTO_RED:
@@ -23,22 +25,27 @@ void fsm_automatic_1_run(){
 			led12 = timegreen;
 			setTimer1(timeTimer(timegreen));
 		}
+
 		break;
 	case AUTO_GREEN:
+
 		SetGreenVer();
 		if (timer1_flag == 1){
 			status_ver = AUTO_YELLOW;
 			led12 = timeyellow;
 			setTimer1(timeTimer(timeyellow));
 		}
+
 		break;
 	case AUTO_YELLOW:
+
 		SetYellowVer();
 		if (timer1_flag == 1){
 			status_ver = AUTO_RED;
 			led12 = timered;
 			setTimer1(timeTimer(timered));
 		}
+
 		break;
 	case MODIFY_RED:
 		if (timer1_flag == 1){
