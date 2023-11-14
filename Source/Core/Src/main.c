@@ -22,10 +22,13 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "software_timer.h"
-#include "fsm_mode.h"
-#include "led_display.h"
 #include "button.h"
+#include "fsm_automatic_1.h"
+#include "fsm_automatic_2.h"
+#include <fsm_mode.h>
+#include <fsm_mode_Led7Seg.h>
+#include <software_timer.h>
+#include "led_display.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,12 +98,18 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim2);
   status_mode = INIT;
   /* USER CODE END 2 */
-  setTimer0(1000);
+  setTimer1(1000);
+  setTimer2(1000);
+  setTimer3(1000);
+  setTimer4(1000);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  fsm_mode_run ();
+	  fsm_mode_run();
+	  fsm_automatic_1_run();
+	  fsm_automatic_2_run();
+	  fsm_mode_led7seg();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
